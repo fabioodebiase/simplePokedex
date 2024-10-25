@@ -1,7 +1,20 @@
 let pokemonElement = document.querySelector(".pokemon-cards")
+let searchBar = document.getElementById("search")
+let allPokemons
+
+//Aggiunta dell'event listener alla searchbar per ogni input da tastiera
+searchBar.addEventListener("keyup" , (e) => {
+    let target = e.target.value;  //valore all'interno del textbox
+    let result = allPokemons.filter(searchPokemon => {  //funzione che permette di filtrare un array in base ad una condizione, richiede sempre un return
+        return searchPokemon.name.toLowerCase().includes(target) || searchPokemon.type.toLowerCase().includes(target)
+        
+    })
+    //richiamo la funzione displayPokemon, con parametro di ritorno l'array di risultati filtrati
+    displayPokemon(result)
+})
 
 async function fetchPokemon() {
-    let allPokemons = [];
+    allPokemons = [];
 
     // Crea un array di promesse per tutte le fetch
     const pokemonPromises = [];
