@@ -1,5 +1,5 @@
 # Simple Pokedex 🐉
-
+https://fabioodebiase.github.io/simplePokedex/
 ## Descrizione
 **Simple Pokedex ** è una pagina web che richiama un'API per ottenere informazioni sui Pokémon (150). L'interfaccia mostra i Pokémon sotto forma di carte, ognuna con il nome del Pokémon e le sue statistiche principali (come attacco, difesa, velocità, ecc.).
 
